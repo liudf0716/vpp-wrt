@@ -8,4 +8,7 @@ help:
 
 install-image: # install vpp-wrt & etcd image
   @echo "# install vpp-wrt base and etcd image"
-  ./get_image.sh
+  ./fetch_image.sh
+
+.PHONY: help \
+	install-image
