@@ -6,18 +6,20 @@ help:
 
 .DEFAULT = help
 
-pre-install: # prepare vpp and dpdk
+pre-install: ## prepare vpp and dpdk
 	@echo "# prepare vpp and dpdk run environment"
 	@modprob vfio-pci
 	@echo Y > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
 	@sysctl -p 80-vpp.conf
 	
-install-image: # install vpp-wrt & etcd image
-  @echo "# install vpp-wrt base and etcd image"
-  ./fetch-images.sh
+install-image: ## install vpp-wrt & etcd image
+	@echo "# install vpp-wrt base and etcd image"
+	chmod +x fetch-images.sh
+	./fetch-images.sh
 
-uninstall-image: # uninstall all install and image
+uninstall-image: ## uninstall all install and image
 	@echo "# uninstall all image and its instance"
+	chmod +x uninstall-images.sh
 	./uninstall-images.sh
 
 .PHONY: help \
