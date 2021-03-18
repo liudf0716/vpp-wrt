@@ -14,12 +14,12 @@ pre-install: ## prepare vpp and dpdk
 	
 install-image: ## install vpp-wrt & etcd image
 	@echo "# install vpp-wrt base and etcd image"
-	chmod +x fetch-images.sh
+	@chmod +x fetch-images.sh
 	./fetch-images.sh
 
 uninstall-image: ## uninstall all install and image
 	@echo "# uninstall all image and its instance"
-	chmod +x uninstall-images.sh
+	@chmod +x uninstall-images.sh
 	./uninstall-images.sh
 
 .PHONY: help \
