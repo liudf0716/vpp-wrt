@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 VPP_WRT_IMAGE_ID=`docker images --filter="reference=liudf0716/vpp-wrt" --quiet`
 ETCD_IMAGE_ID=`docker images --filter="reference=quay.io/coreos/etcd" --quiet`
 
