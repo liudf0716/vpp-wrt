@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 # install docker
 if [[ $(which docker) && $(docker --version) ]]; then
     echo "already install docker"
 else
-  echo "install docker"
-  sudo apt-get update
-  sudo apt install docker.io
-  sudo systemctl start docker
-  sudo systemctl enable docker
+    echo "install docker"
+    sudo apt-get update
+    sudo apt install docker.io
+    sudo systemctl start docker
+    shelsudo systemctl enable docker
 fi
 
 # install etcd
